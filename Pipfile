@@ -17,8 +17,11 @@ django-extensions = "*"
 django-rest-swagger = "*"
 
 [dev-packages]
+pylint = "*"
 
 [scripts]
+super = "python manage.py createsuperuser"
+make = "python manage.py makemigrations"
 migrate= "python manage.py migrate"
 start= "python manage.py runserver $IP:$PORT"
 diagram= "python manage.py graph_models api -o diagram.png"

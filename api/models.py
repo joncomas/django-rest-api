@@ -8,9 +8,7 @@ from django.db import models
 Define he Contact Entity into your applcation model
 """
 class Contact(models.Model):
-    first_name = models.CharField(max_length=50, default='')
-    last_name = models.CharField(max_length=50, default='')
-    phone_number = models.CharField(max_length=15, default='')
+    password = models.CharField(max_length=50, default='')
     email = models.CharField(max_length=150, default='')
 
 """
@@ -23,4 +21,4 @@ class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
         # what fields to include?
-        fields = ('first_name','last_name', 'phone_number', 'email')
+        fields = ('password', 'email')
